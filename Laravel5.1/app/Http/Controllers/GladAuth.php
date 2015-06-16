@@ -8,7 +8,6 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Validator;
 use Glad\Glad;
-use GladModel;
 
 class GladAuth extends Controller
 {
