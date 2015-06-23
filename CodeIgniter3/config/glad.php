@@ -1,26 +1,25 @@
 <?php
 
-return [
-	'uniqueField' => 'id',
+$config['glad'] = [
     'fields' => [
-        'identity' => ['username','email'], 
+        'identity' => ['email'], 
         'password' => 'password'
     ],
     'repository' => [
         'session' => [
-			'path'   => '../cache/',
-			'type'   => 'serialize',
-			'name' 	 => 'SESSIONID',
-			'prefix' => 'ses_',
-			'crypt'	 => false,
-			'timeout'=> 1800
-		]
+            'path'   => '../cache/',
+            'type'   => 'serialize',
+            'name'   => 'SESSIONID',
+            'prefix' => 'ses_',
+            'crypt'  => false,
+            'timeout'=> 1800
+        ]
     ],
     'provider' => [
         'SessionHandlerInterface' => 'Glad\Driver\Repository\NativeSession\Session'
     ],
     'services' => [
-        'db' => new \Model\YourModel
+        'db' => '',
     ],
     'remember' => [
         'enabled'   => true,
